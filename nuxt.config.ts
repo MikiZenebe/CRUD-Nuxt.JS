@@ -7,4 +7,9 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-})
+
+  //Server config variable
+  runtimeConfig: {
+    MONGO_URI: process.env.MONGO_URI,
+  },
+});
