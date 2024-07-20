@@ -1,3 +1,5 @@
+import BookModel from "~/server/db/models/Book.model";
+
 export default defineEventHandler(async (e) => {
-  return "Hello from books";
+  return await BookModel.find().populate("authors");
 });
